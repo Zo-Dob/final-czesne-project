@@ -24,7 +24,7 @@ let angleOffset = 0;
 
 function setup() {
   createCanvas(1920, 1080);
- fullScreen(true)
+ fullscreen(true)
 }
 
 
