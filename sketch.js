@@ -163,7 +163,7 @@ function draw() {
     textStyle(BOLD);
     textSize(53);
     fill('#027dcf')
-    text('690€', 980, 215)
+    text('690€', 980, 215);
     textStyle(NORMAL)
     fill('#000')
     textSize(35)
