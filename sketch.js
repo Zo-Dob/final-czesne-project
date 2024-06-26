@@ -4,6 +4,7 @@ let index = 0;
 let stage1 = 1
 let xz=200  //stage 1
 let yz=330  //stage 1
+let t=0
 
 let x=20; // x of button
 let y=210; // y of button
@@ -206,11 +207,16 @@ function draw() {
     let thickness = thick[i];// random(1, 10);              // Generate a random thickness for each line (smaller range)
     strokeWeight(thickness);                   // Set the thickness of the line
     line(swpx, swpy, x, y);              // Draw the line
+        if (stage1>4){
+        t++
+        if (t==400){ 
+          window.open ("https://activistgames.github.io/startingPoints","_self")
+        }
+      }
   }
   //  loop()
   }
-  
-  }
+
 }
 
 function mouseReleased(){
