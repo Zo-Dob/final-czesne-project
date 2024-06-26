@@ -4,7 +4,6 @@ let index = 0;
 let stage1 = 1
 let xz=200  //stage 1
 let yz=330  //stage 1
-let t=0
 
 let x=20; // x of button
 let y=210; // y of button
@@ -21,7 +20,8 @@ let angleOffset = 0;
   let longRadius = 160; 
   let shortRadius = 145; 
 
- 
+let swpsDrawTime = null;
+
 
 function setup() {
   createCanvas(1920, 1080);
@@ -193,6 +193,15 @@ function draw() {
     textStyle(ITALIC)
     textSize(40)
     text('openness,courage,responsibility',890,910)
+
+      if (swpsDrawTime === null) {
+        swpsDrawTime = millis();
+      }
+
+      // Check if 15 seconds have passed
+      if (millis() - swpsDrawTime >= 15000) {
+        window.open("https://activistgames.github.io/startingPoints", "_self");
+      }
     
     stroke('#000')
     strokeWeight(70)
